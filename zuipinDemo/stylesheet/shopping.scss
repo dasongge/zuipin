@@ -1,0 +1,240 @@
+@charset "utf-8";
+
+#no_shopping_box{
+    display: none;
+    width: 100%;
+    padding: 40px 0 60px 0;
+    background-color: #f5f5f5;
+}
+#no_shopping_box .noshopping {
+    width: 1226px;
+    margin: 0 auto;
+    position: relative;
+}
+#no_shopping_box .noshopping .go_shop {
+    width: 74px;
+    height: 30px;
+    display: block;
+    position: absolute;
+    left: 537px;
+    top: 108px;
+}
+
+
+
+
+
+
+
+#cart{
+    width:100%;
+    padding:40px 0 0;
+    
+}
+#cart dt {
+    position: relative;
+    border-bottom: 2px solid #ccc;
+}
+#cart dd:last-child {
+    border-bottom: 0;
+}
+.zuipin-wrapper dl dt{
+    height: 79.6px;
+    background-color:white;
+}
+.zuipin-wrapper {
+    width: 1226px;
+    margin: 0 auto;
+    position: relative;
+}
+.name-sp {
+    width:48%;
+    padding: 26px 0;
+    text-align: center;
+    
+}
+.sp_left{
+    overflow: hidden;
+}
+.price-sp {
+    width: 14%;
+    text-align: left;
+    padding: 26px 0;
+    text-align: center;
+}
+.price-sp p{
+    margin-top:18px;
+}
+.num-sp {
+    width:20%;
+    text-align: center;
+    padding: 26px 0;
+    text-align: center;
+}
+.count-sp {
+    width:10%;
+    text-align: left;
+    padding: 26px 0;
+    text-align: center;
+}
+.do-sp {
+    width: 8%;
+    text-align: center;
+    padding: 26px 0;
+}
+
+.name-sp ul li {
+    float: left;
+    display: block;
+}
+.img-sp {
+    width: 70px;
+    height: 70px;
+}
+.img-sp img{
+    width:100%;
+    
+}
+.name-sp ul li:nth-child(1){
+    margin-left: 10px;
+}
+.name-sp ul li:nth-child(2) {
+    margin-left: 30px;
+    color: #333;
+    line-height: 1.5;
+    margin-top:18px;
+}
+.ms-sp {
+    width: 470px;
+    overflow: hidden;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+    text-align: left;
+}
+.hm-sp {
+    text-align: left;
+    // height: 500px;
+}
+#sh_cart{
+    height: 100%;
+  
+    overflow: hidden;
+}
+#sh_cart dd{
+    overflow:hidden;
+    background-color: #fff8f0;
+}
+#sh_cart dd:hover{
+    background-color: white;
+}
+
+.jian,.plus {
+    width: 20px;
+    height: 32px;
+    text-align: center;
+    color: #666;
+    cursor: pointer;
+    font-size: 14px;
+    position: relative;
+    background: #fff;
+    border: 1px solid #aaa;
+    display: inline-block;
+    box-sizing: border-box;
+    padding: 0 5px;
+    margin-top: 12px;
+}
+.all-num {
+    width: 42px;
+    height: 28px;
+    line-height: 28px;
+    color: #666;
+    font-size: 14px;
+    cursor: pointer;
+    position: relative;
+    text-align: center;
+}
+.deep-red {
+    color: #c00000;
+    margin-top:18px;
+}
+.del {
+    margin-left: 40px;
+    cursor: pointer;
+    width: 19px;
+    height: 19px;
+    background-repeat: no-repeat;
+    background-image: url('./../images/cart-grey.png');
+    background-position: 0 center;
+    margin-top:18px;
+}
+.del:hover{
+    background-image: url("./../images/cart-red.png");
+}
+
+.cart-sum {
+    box-shadow: 0px -2px 3px rgba(0, 0, 0, 0.2);
+    width: 1226px;
+    z-index: 100;
+    height: 72px;
+    margin: 30px 0 60px;
+    background-color: #fff;
+    position: relative;
+}
+.cart-fixed-count {
+    float: left;
+    margin-left: 25px;
+    color: #424242;
+    font-size: 14px;
+    line-height: 74px;
+}
+.cart-fixed-count span {
+    color: #c00000;
+    font-weight: bold;
+}
+.cart-sum .sum-money {
+    width: 200px;
+    cursor: pointer;
+    background-color: #ff3600;
+    color: #fff;
+    font-size: 18px;
+    text-align: center;
+    line-height: 72px;
+    height: 72px;
+    transition: all .2s;
+    -webkit-transition: all .2s;
+    -o-transition: all .2s;
+    -moz-transition: all .2s;
+}
+.sum-money:hover{
+    background-color:#ee3400;
+}
+.all-money {
+    color: #333;
+    float: right;
+    margin-right: 40px;
+    padding-top: 8px;
+}
+.cart-sum .all-money .label-txt {
+    display: inline-block;
+    width: 130px;
+    text-align: right;
+    color: #424242;
+    font-size: 14px;
+}
+.cart-sum .money {
+    margin-left: 10px;
+    color: #c00000;
+    font-size: 14px;
+}
+.cart-sum .big-money {
+    font-size: 26px;
+    font-weight: bold;
+    color: #c00000;
+}
+.free-post-ent {
+    position: absolute;
+    top: 42px;
+    right: 244px;
+    color: #bf0100;
+    font-size: 14px;
+}

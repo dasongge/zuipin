@@ -1,0 +1,129 @@
+.liebiao_box {
+  width: 100%;
+  background-color: #f5f5f5;
+  height: 2240px; }
+
+.liebiao {
+  width: 1226px;
+  height: 100%;
+  margin: 0 auto; }
+
+.item {
+  position: relative;
+  overflow: hidden;
+  width: 296px;
+  height: 434px;
+  background-color: #fff;
+  margin-right: 14px;
+  margin-bottom: 14px;
+  transition: all .3s;
+  -webkit-transition: all .3s;
+  -o-transition: all .3s;
+  -moz-transition: all .3s;
+  box-sizing: border-box;
+  padding: 30px 20px 0;
+  float: left; }
+
+.liebiao .item:nth-of-type(4n) {
+  margin-right: 0px; }
+
+.item .tag-img {
+  position: absolute;
+  right: 10px;
+  top: 0;
+  max-width: 80px;
+  max-height: 80px;
+  overflow: hidden;
+  z-index: 10; }
+
+.item dt a {
+  display: block;
+  width: 220px;
+  height: 220px;
+  overflow: hidden;
+  margin: 0 auto;
+  position: relative; }
+
+.item dt a img {
+  max-width: 100%;
+  position: absolute;
+  margin: auto;
+  top: 0;
+  left: 0;
+  bottom: 0;
+  right: 0; }
+
+.new-goodsSomething {
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.5;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  max-height: 42px;
+  display: -webkit-box;
+  -webkit-box-orient: vertical;
+  -webkit-line-clamp: 2;
+  margin: 21px 0 10px; }
+
+.goodsPing {
+  margin: 0 auto 20px;
+  width: 202px;
+  text-align: center;
+  font-size: 12px;
+  line-height: 12px;
+  box-sizing: border-box;
+  color: #b0b0b0;
+  max-height: 12px;
+  padding: 0 20px;
+  text-overflow: ellipsis;
+  overflow: hidden;
+  white-space: nowrap; }
+
+.nowPrice {
+  margin-bottom: 20px;
+  text-align: center;
+  font-size: 14px;
+  color: #c00000;
+  line-height: 14px; }
+
+.peopleGood {
+  line-height: 14px;
+  text-align: center;
+  font-size: 14px;
+  color: #ccc; }
+
+.cart-show {
+  position: absolute;
+  bottom: -52px;
+  left: 0;
+  transition: all .2s;
+  -webkit-transition: all .2s;
+  -o-transition: all .2s;
+  -moz-transition: all .2s;
+  cursor: pointer; }
+
+.red-buy {
+  width: 300px;
+  font-size: 16px;
+  line-height: 52px;
+  background-color: #ff3600;
+  color: #fff;
+  text-align: center;
+  transition: all .2s;
+  -webkit-transition: all .2s;
+  -o-transition: all .2s;
+  -moz-transition: all .2s; }
+
+.item:hover .cart-show {
+  position: absoloat;
+  bottom: 0; }
+
+.item:hover {
+  box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+  transform: translate3d(0, -2px, 0);
+  -webkit-transform: translate3d(0, -2px, 0);
+  -o-transform: translate3d(0, -2px, 0);
+  -moz-transform: translate3d(0, -2px, 0); }
+
+.item:hover .new-goodsSomething {
+  color: red; }

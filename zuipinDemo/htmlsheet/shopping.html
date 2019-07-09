@@ -1,0 +1,369 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>购物车页面</title>
+    <link rel="stylesheet" href="../css/shopping.min.css">
+    <link rel="stylesheet" href="../css/index.min.css">
+    
+    <script src = "../js/require.js" defer async = "true" data-main = "../js/main"></script>
+</head>
+<body>
+     <!-- 开头 -->
+     <div class="header_box">
+            <div class="header">
+                <ul class="ull">
+                    <li><a href="">醉品茶城首页</a></li>
+                    <li><a href="">OMO体验店加盟</a></li>
+                    <li class="last"><a href="">醉品茶城手机版</a><div class="iphone"><img src="https://www.zuipin.cn/web/images/phone_qr.jpg" alt="">手机登录购买</div></li>
+        
+                </ul>
+                
+                <div class="header_right" id="ceshi">
+                    <dl>
+                        <dt>
+                            <a href="">购物车</a>
+                            <span class="num headerCartNum">0</span>
+                        </dt>
+                        <dd class="carta">
+                            <div class="list_empty">
+                                <a href="/" id="aaaa">
+                                    <img src="../images/cart_03.png" alt="">
+                                </a>
+                                <div class="list_has">
+                                    <p class="cart-new">
+                                        最新加入
+                                    </p>
+                                    <div class="buy_list_info">
+                                        <div class="buy_lists">
+                                            <ul>
+                                                     
+                                            </ul>
+                                        </div>
+                            
+                                    </div>
+                                </div>
+                                <div class="buy_end">
+                                   
+                                </div>
+                            </div>
+                        </dd>
+                    </dl>
+                </div>
+                <div class="header_center">
+                    <ul class="er">
+                        <li><a href="">登录</a></li>
+                        <li><a href="">注册</a></li>
+                        <li><a href="">我的订单</a></li>
+                        <li><a href="">帮助中心</a></li>
+                        <li><a href="">关于醉品</a></li>
+                        <li class="lasts"><a href="">4006-066-068</a></li>
+                    </ul>
+                </div>
+            </div> 
+        </div>
+        
+        <div id="headerTap">
+            <div class="headerTap_box">
+                <div class="search_box">
+                    <img style="float:left" src="../images/zuipin_g.gif" alt="醉品茶城">
+                    <form action="">
+                        <input type="text" name="keyword" class="search_text">
+                    </form>
+                    <span class="search_btn" id="sub"></span>
+                    <div class="clearfix">
+                        <a href="#" target="_blank" class="first_hot">白茶</a>
+                        <a href="#" target="_blank">广东单枞</a>
+                        <a href="#" target="_blank">龙井</a>     
+                        <a href="#" target="_blank">金骏眉</a>
+                        <a href="#" target="_blank">普洱</a>
+                    </div>
+        
+                </div>
+                <div class="three_list">
+                    <ul>
+                        <li>
+                            <p>全场商品90天保价</p>
+                        </li>
+                        <li>
+                            <p>满59元免邮费</p>
+                        </li>
+                        <li>
+                            <p>2000城市货到付款</p>
+                        </li>
+                    </ul>
+                </div>
+                <div class="code">
+                    <img src="https://www.zuipin.cn/web/images/phone_qr.jpg" alt="">
+                    <span>手机登录购买</span>
+                </div>
+            </div>
+        </div>
+        <!-- 商品分类 -->
+        <div class="shopping_box">
+            <div class="shopping">
+                <div class="shopping_left">
+                <span>全部商品分类</span>
+                </div>
+                <div class="shopping_right">
+                    <ul>
+                        <li><a href="">品牌集成馆</a></li>
+                        <li><a href="">大师名匠馆</a></li>
+                        <li><a href="">线下OMO体验店</a></li>
+                        <li><a href="">积分商城</a></li>
+                        <li><a href="">茶礼定制</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+
+        <!-- 购物列表 -->
+        <!-- 没有商品的时候 -->
+        <div id="no_shopping_box">
+            <div class="noshopping">
+                <img src="../images/emptyCart.png" alt="">
+                <a href="../index.html" class="go_shop"></a>
+            </div>
+        </div>
+        <!-- 有商品的时候 -->
+        <div id="cart">
+            <div class="zuipin-wrapper">
+                <dl>
+                    
+                    <dt>
+                        <div>
+                            <div class="name-sp float-left">
+                                    商品名称
+                            </div>
+                            <div class="price-sp float-left" style="text-align: center;">
+                                价格
+                            </div>
+                            <div class="num-sp float-left">
+                                数量
+                            </div>
+                            <div class="count-sp float-left" style="text-align: center;">
+                                小计
+                            </div>
+                            <div class="do-sp float-left">
+                                操作
+                            </div>
+                        </div>
+                     
+                    </dt>
+                    
+                    
+
+
+                    <div id="sh_cart">
+                        <!-- <dd>
+                            <div class="name-sp float-left">
+                                <a href="/goods?id=ZPLYDZ1706">
+                                    <ul class="sp_left">
+                                        <li>
+                                            <div class="img-sp">
+                                                <img src="../images/liebiao-01.jpg">
+                                            </div>
+                                        </li>
+                                        <li>
+                                            <p class="ms-sp" title="醉品叶界 2019年 春茶 王清海大师代表作 安溪铁观音  特级 288g 乌龙茶 新茶抢鲜上市">
+                                                醉品叶界 2019年 春茶 王清海大师代表作 安溪铁观音  特级 288g 乌龙茶 新茶抢鲜上市
+                                            </p>
+                                            <p class="hm-sp">
+                                                ZPLYDZ1706
+                                            </p>
+                                        </li>
+                                    </ul>
+                                </a>
+                            </div>
+                            
+        
+                            <div class="price-sp float-left">
+                                <p>
+                                    <span class="price">
+                                        ￥99.00
+                                    </span>
+                                </p>
+                            </div>
+        
+                            <div class="num-sp float-left num-box">
+                                <button type="button" class="jian reduce">-</button>
+                                <input type="text" value="1" class="all-num product-num">
+                                <button type="button" class="plus increase">+</button>
+                            </div>
+        
+                            <div class="count-sp float-left">
+                                <p class="deep-red">￥<span class="all-price item-subtotal">99.00</span></p>
+                            </div>
+        
+                            <div class="do-sp float-left">
+                                <div class="del del-product del-normal">
+                                </div>
+                            </div>
+                        </dd> -->
+                        
+                    </div>
+                    
+                </dl>
+                
+                
+
+                <div class="cart-sum">
+                    <div class="cart-fixed-count">
+                        已选择 <span class="selectProductNum">3</span> 件商品
+                    </div>
+
+                    <span class="sum-money float-right" id="toCheckout">去结算</span>
+                    <div class="all-money">
+                        <span><span class="label-txt">总计（不含运费）：</span><span class="red money">￥<span class="big-money">746.00</span></span></span>
+                    </div>
+                    <a href="#freebox" class="free-post-ent">已满足满59包邮</a>
+                </div>
+
+                
+            </div>
+        </div>
+
+
+
+
+
+
+
+
+        <!-- 结尾 -->
+    <div class="footer_box">
+        
+        <div class="footer_top_box">
+            <div class="footer_top">
+                <div class="top">
+                    <ul>
+                        <li><span>原产地直供</span></li>
+                        <li><span>1000家合作社联盟</span></li>
+                        <li><span>10万亩茶园直供</span></li>
+                        <li><span>90天商品保价</span></li>
+                        <li><span>30天商品保价</span></li>
+                        <li><span>满59元免运费</span></li>
+                    </ul>
+                </div>
+                <div class="bottom">
+                    <dl class="col-links">
+                        <dt>购物指南</dt>
+                        <dd><a href="https://www.zuipin.cn/page/shopping#g1" target="_blank">购物保障</a></dd>
+                        <dd><a href="https://www.zuipin.cn/page/shopping#g2" target="_blank">积分政策</a></dd>
+                        <dd><a href="https://www.zuipin.cn/page/shopping#g3" target="_blank">企业用户</a></dd>
+                    </dl>
+                    <dl class="col-links">
+                        <dt>配送方式</dt>
+                        <dd><a href="https://www.zuipin.cn/page/shopping#g1" target="_blank">快递资费</a></dd>
+                        <dd><a href="https://www.zuipin.cn/page/shopping#g2" target="_blank">配送时间</a></dd>
+                        <dd><a href="https://www.zuipin.cn/page/shopping#g3" target="_blank">配送范围</a></dd>
+                        <dd><a href="https://www.zuipin.cn/page/shopping#g3" target="_blank">验货签收</a></dd>
+                    </dl>
+                    <dl class="col-links">
+                        <dt>支付方式</dt>
+                        <dd><a href="https://www.zuipin.cn/page/shopping#g1" target="_blank">货到付款</a></dd>
+                        <dd><a href="https://www.zuipin.cn/page/shopping#g2" target="_blank">在线支付</a></dd>
+                        <dd><a href="https://www.zuipin.cn/page/shopping#g3" target="_blank">网银在线</a></dd>
+                        <dd><a href="https://www.zuipin.cn/page/shopping#g3" target="_blank">银行转账</a></dd>
+                    </dl>
+                    <dl class="col-links">
+                        <dt>售后服务</dt>
+                        <dd><a href="https://www.zuipin.cn/page/shopping#g1" target="_blank">退换货原则</a></dd>
+                        <dd><a href="https://www.zuipin.cn/page/shopping#g2" target="_blank">退换货要求</a></dd>
+                        <dd><a href="https://www.zuipin.cn/page/shopping#g3" target="_blank">运费规则</a></dd>
+                        <dd><a href="https://www.zuipin.cn/page/shopping#g3" target="_blank">退换货流程</a></dd>
+                    </dl>
+                    <dl class="col-links">
+                        <dt>OMO体验店</dt>
+                        <dd><a href="https://www.zuipin.cn/page/shopping#g1" target="_blank">加盟政策</a></dd>
+                        <dd><a href="https://www.zuipin.cn/page/shopping#g2" target="_blank">网点分布</a></dd>
+                        <dd><a href="https://www.zuipin.cn/page/shopping#g3" target="_blank">合作加盟</a></dd>
+                    </dl>
+                    <dl class="col-links">
+                        <dt>关于醉品</dt>
+                        <dd><a href="https://www.zuipin.cn/page/shopping#g1" target="_blank">关于我们</a></dd>
+                        <dd><a href="https://www.zuipin.cn/page/shopping#g2" target="_blank">醉品动态</a></dd>
+                        <dd><a href="https://www.zuipin.cn/page/shopping#g3" target="_blank">媒体声音</a></dd>
+                        <dd><a href="https://www.zuipin.cn/page/shopping#g3" target="_blank">品牌集成</a></dd>
+                    </dl>
+                    <div class="col-contact">
+                        <p class="iphone">4006-066-068</p>
+                        <p><span>周一至周日 08:40-22:30</span></p> 
+                        <a href="http://wpa.qq.com/msgrd?v=3&uin=800002599&site=qq&menu=yes" target="_blank">在线客服</a>
+                    </div>
+                    <div class="col-wap">
+                        <img src="https:www.zuipin.cn/web/images/phone_qr.jpg" alt="">
+                        <p>醉品茶城手机版</p>
+                    </div>   
+                </div>
+            </div>
+        </div>
+        <div class="footer_bottom_box">
+            <div class="footer_bottom clear">
+                <div>
+                    <img src="https://www.zuipin.cn/web/images/common/zui.png" alt="">
+                </div>
+                <div class="col-us">
+                    <ul class="clear">
+                        <li>
+                            <a href="https://www.zuipin.cn/page/about">关于我们</a>
+                            |
+                        </li>
+                        <li>
+                            <a href="https://www.zuipin.cn/page/about">版权声明</a>
+                            |
+                        </li>
+                        <li>
+                            <a href="https://www.zuipin.cn/page/about">成为代理商</a>
+                            |
+                        </li>
+                        <li>
+                            <a href="https://www.zuipin.cn/page/about">联系我们</a>
+                        </li>
+                    </ul>
+                    <footer class="copyright">
+                        <p>&copy; 2010 - 2019 配品茶城 厦门醉品春秋网络科技有限公司</p>
+                    </footer>
+                    <div>
+                        <span style="margin-right:20px;">zuipin.cn All Rights Reserved</span>
+                        <a href="http://www.miibeian.gov.cn/" target="_blank">闽ICP备10200063号-1</a>
+                    </div>
+                </div>
+                <div style="margin:18px 50px">
+                    <img src="https://www.zuipin.cn/web/images/common/pincha.png" alt="">
+                </div>
+                <div>
+                    <ul class="ulll">
+                        <li>
+                            <a href="">
+                                <span>海峡两岸茶业交流协会<br>互联网分会</span>
+                            </a>
+                        </li>、
+                        <li>
+                            <a href="">
+                                <span>315安全服务<br>保障认证</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span>可信网站<br>示范企业</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span>安全联盟<br>实验验证</span>
+                            </a>
+                        </li>
+                        <li>
+                            <a href="">
+                                <span>工商执照<br>经营允许</span>
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+</body>
+</html>
