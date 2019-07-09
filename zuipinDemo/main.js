@@ -14,7 +14,8 @@ require.config({
 		"special":"special",
 		"toutiao":"toutiao",
 		"liebiao":"liebiao",
-		"shopping":"shopping"
+		"shopping":"shopping",
+		"xiangqing":"xiangqing"
 	},
 	shim: {
 		//jquer-cookie是依赖于jquery开发的
@@ -27,7 +28,7 @@ require.config({
 })
 
 //去用
-require(["banner","dh","last","center","bannerbutton","special","toutiao","liebiao","shopping"],function(slide,ddh,last,content,bannerbutton,special,toutiao,liebiao,shopping){
+require(["banner","dh","last","center","bannerbutton","special","toutiao","liebiao","shopping","xiangqing"],function(slide,ddh,last,content,bannerbutton,special,toutiao,liebiao,shopping,xiangqing){
 	slide.banner();
 	ddh.ddh();
 	last.last();
@@ -37,6 +38,5 @@ require(["banner","dh","last","center","bannerbutton","special","toutiao","liebi
 	toutiao.toutiao();
 	liebiao.liebiao();
 	shopping.shopping();
-
-	
+	xiangqing.xiangqing();
 })

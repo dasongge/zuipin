@@ -1,8 +1,39 @@
 @charset "utf-8";
+html,figure,body,h1,h2,h3,h4,h5,h6,p,img,form,fieldset,legend,ul,ol,dl,li,dd,dt{
+	margin:0;
+	padding:0;
+}
+ul,ol,dl{
+	list-style:none;
+}
 
-html,body{
-    background-color:#f5f5f5;
-    
+a{
+	
+	text-decoration:none;
+}
+i,em,b,strong{
+	font-style:normal;
+	font-weight:normal;
+}
+.clear:after{
+	content:"";
+	overflow:hidden;
+	height:0;
+	visibility:hidden;
+	display:block;
+	clear:both;
+}
+img,fieldset{
+	border:0;
+	vertical-align:middle;
+}
+
+
+body {
+    font-family: Arial, Tahoma, "Microsoft YaHei", "微软雅黑", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+    font-size: 14px;
+    color: #333;
+    background-color: #f5f5f5;
 }
 .header{
     width:100%;
@@ -12,9 +43,97 @@ html,body{
     width:1226px;
     height: 100px;
     margin:0 auto;
-    background-color:pink;
+    background-color:white;
 }
-.header_box div{
-    width:100px;height: 100px;background-color: red;
+.zuipin-logo a img {
+    
+    margin-top: 34px;
 }
-
+.yoo{
+    float:right;
+    margin-top:40px;    
+    color:skyblue; 
+    font-size:18px;
+}
+.zuipin-content {
+    width: 100%;
+    margin: 0 auto;
+}
+.zuipin-wrapper {
+    width: 1226px;
+    margin: 0 auto;
+    position: relative;
+}
+.step-box {
+   
+    margin: 30px 0;
+    background-color: #fff;
+    padding-bottom: 14px;
+    height:700px;
+    overflow: hidden;
+}
+.company {
+    text-align: center;
+    color: #999;
+    font-size: 14px;
+    line-height: 48px;
+}
+.title{
+    display: block;
+    
+}
+.title img{
+    display: block;
+    margin:50px auto;
+    width:150px;
+    margin-bottom:0;
+}
+.content{
+    margin:0 auto;
+    width:500px;
+    height:500px;
+    border:2px solid rgba(6, 99, 185, 0.767);
+    border-radius: 8px;
+    margin-top:50px;
+    background-color:rgb(246, 250, 252)
+    
+}
+.zi{
+    width:485px;
+    height:30px;
+    background-color:rgba(6, 99, 185, 0.767);
+    color:white;
+    padding:10px 0 0 15px;
+    border-top-right-radius: 6px;
+    border-top-left-radius: 6px;
+}
+.form-in{
+    margin-bottom: 15px;
+}
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+.form-control {
+    display: block;
+    width: 100%;
+    height: 34px;
+    
+    font-size: 14px;
+ 
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+.box{
+    margin:10px 20px;
+}

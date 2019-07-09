@@ -1,6 +1,9 @@
 console.log("购物车");
 define(["jquery","jquery-cookie"],function($){
     function shopping(){
+        sc_num();
+        sc_num1();
+        
         var cookieStr = $.cookie("goods");
         if(cookieStr){
             var cookieArr = JSON.parse(cookieStr);
@@ -42,13 +45,13 @@ define(["jquery","jquery-cookie"],function($){
     
                             <div class="price-sp float-left">
                                 <p>
-                                    <span class="price">
-                                        ￥${arr[i].p3}.00
+                                ￥<span class="price">
+                                        ${arr[i].p3}.00
                                     </span>
                                 </p>
                             </div>
     
-                            <div class="num-sp float-left num-box">
+                            <div id = "${newArr[i].id}" class="num-sp float-left num-box">
                                 <button type="button" class="jian reduce">-</button>
                                 <input type="text" value="${newArr[i].num}" class="all-num product-num">
                                 <button type="button" class="plus increase">+</button>
@@ -59,12 +62,14 @@ define(["jquery","jquery-cookie"],function($){
                             </div>
     
                             <div class="do-sp float-left">
-                                <div class="del del-product del-normal">
+                                <div id = "${newArr[i].id}" class="del del-product del-normal">
                                 </div>
                             </div>
                         </dd>
                         `);
                         node.appendTo("#sh_cart");
+                        
+                        
                     }
                 },
                 error:function(msg){
@@ -75,15 +80,45 @@ define(["jquery","jquery-cookie"],function($){
         }
         
         // //添加点击事件  +  -
-        // $("#sh_cart").on("click",".jian",function(){
-        //     var cookieArr = JSON.parse($.cookie("goods"));
-        // })
+        $("#sh_cart").on("click","button",function(){
+            // alert(this.innerHTML);
+           
+            //找到商品id
+            var id =$(this).closest("div").attr("id");
+            var cookieArr = JSON.parse($.cookie("goods"));
+            for(var i= 0 ; i < cookieArr.length; i++){
+                if(cookieArr[i].id == id){
+                    //找到当前要修改的商品
+                    //判断是要+ 还是 —
+                    if(this.innerHTML == "+"){
+                        cookieArr[i].num++;
+                    }else{
+                        if(cookieArr[i].num == "1"){
+                            alert("数量已为1，无法删减");
+                        }else{
+                            cookieArr[i].num--;
+                        }
+                        
+                       
+                    }
+                    //在页面显示商品数量
+                    $(this).siblings("input").val(cookieArr[i].num);
+                    break;
+                }
+            }
+            //将数据存回cookie
+            $.cookie("goods",JSON.stringify(cookieArr),{
+                expires:7
+            })
+            sc_num1();
+            sc_num();
+        })
 
         //添加点击事件 删除
-        $("#sh_cart").on("click","del",function(){
+        $("#sh_cart").on("click",".del",function(){
             var id = this.id;
              //1.删除页面上的数据  closest找到父节点
-            $(this).closest("#sh_cart li").remove();
+            $(this).closest("#sh_cart dd").remove();
              //2.删除cookie中的数据   
             var cookieArr = JSON.parse($.cookie("goods"));
             for(var i = 0 ; i < cookieArr.length;i++){
@@ -99,8 +134,59 @@ define(["jquery","jquery-cookie"],function($){
                     expires:7
                 })
             }
+            sc_num1();
+            sc_num();
+        
         })
 
+        //让小计的所有数值进行相加
+        // function sc_num2(){
+        //     var cookieStr = $.cookie("goods");
+        //     var num = 0 ;
+        //     if(cookieStr){
+                
+        //         var cookieArr = JSON.parse(cookieStr);
+        //         for(var i = 0 ; i < cookieArr.length;i++){
+        //             // sum1 += cookieArr[i].num;
+        //             // var n = $(".price").html() * cookieArr[i].num;
+                    
+        //         }
+        //         // $(".big-money").html(n++);
+        //     }
+            
+           
+           
+           
+        // }
+        //计算商品数量
+        function sc_num1(){
+            var cookieStr = $.cookie("goods");
+            var sum1 = 0;
+            if(cookieStr){
+                
+                var cookieArr = JSON.parse(cookieStr);
+                for(var i = 0 ; i < cookieArr.length;i++){
+                    sum1 += cookieArr[i].num;
+                }
+                
+            }
+       
+            $(".selectProductNum").html(sum1);
+        }
+        function sc_num(){
+            var cookieStr = $.cookie("goods");
+            if(!cookieStr){
+                $(".headerCartNum").html(0);
+    
+            }else{
+                var sum = 0;
+                var cookieArr = JSON.parse(cookieStr);
+                for(var i = 0 ; i < cookieArr.length;i++){
+                    sum += cookieArr[i].num;
+                }
+                $(".headerCartNum").html(sum);
+            }
+        }
         
     }
     return{
