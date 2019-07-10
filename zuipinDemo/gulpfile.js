@@ -36,7 +36,7 @@ gulp.task("scripts",function(){
 })
 //拷贝数据
 gulp.task("data",function(){
-    return gulp.src(["*.json","!package.json"])
+    return gulp.src(["*.json","*.php","!package.json"])
     .pipe(gulp.dest("dist/data"))
     .pipe(connect.reload());
 })
@@ -121,7 +121,7 @@ gulp.task("watch",function(){
 
     gulp.watch(["*.{jpg,png,gif}","images/*.{jpg,png,gif}"],['images']);
     gulp.watch(["*.js","!gulpfile.js"],['scripts']);
-    gulp.watch(["*.json","!package.json"],['data']);
+    gulp.watch(["*.json","*.php","!package.json"],['data']);
     gulp.watch("stylesheet/index.scss",["sass"]);
     gulp.watch("stylesheet/reset.scss",["sass1"]);
     gulp.watch("stylesheet/denglu.scss",["denglu"]);

@@ -69,7 +69,7 @@ body {
     margin: 30px 0;
     background-color: #fff;
     padding-bottom: 14px;
-    height:700px;
+    height:750px;
     overflow: hidden;
 }
 .company {
@@ -91,12 +91,13 @@ body {
 .content{
     margin:0 auto;
     width:500px;
-    height:500px;
+    height:auto;
     border:2px solid rgba(6, 99, 185, 0.767);
     border-radius: 8px;
     margin-top:50px;
-    background-color:rgb(246, 250, 252)
-    
+    background-color:rgb(246, 250, 252);
+    overflow:hidden;
+
 }
 .zi{
     width:485px;
@@ -136,4 +137,84 @@ label {
 }
 .box{
     margin:10px 20px;
+}
+.pp1 span {
+    
+    width: 72px;
+    height: 20px;
+    float: left;
+    margin: 10px 0 0 5px;
+    background-color: #06a713;
+    text-align: center;
+    color: #cecece;
+    display: none;
+    color:white;
+}
+.pp1 .active{
+    background-color: green;
+    color: #fff;
+}
+.form-control1{
+    display: block;
+    width: 64%;
+    height: 34px;
+    
+    font-size: 14px;
+
+    float:left;
+    color: #555;
+    background-color: #fff;
+    background-image: none;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    -webkit-box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    box-shadow: inset 0 1px 1px rgba(0,0,0,.075);
+    -webkit-transition: border-color ease-in-out .15s,-webkit-box-shadow ease-in-out .15s;
+    -o-transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+    transition: border-color ease-in-out .15s,box-shadow ease-in-out .15s;
+}
+#ma {
+    width: 33%;
+    height: 36px;
+    border: 1px solid #e7e7e7;
+    float: right;
+    margin-left: 5px;
+    background: url(../images/ma.png)no-repeat;
+    text-align: center;
+    line-height: 36px;
+    font-size: 20px;
+   
+}
+.heh{
+    display: block;
+}
+.hhhh{
+    overflow: hidden;
+}
+#button{
+
+    width:160px;
+    height:46px;
+    border-radius: 4px;
+    background-color:rgba(6, 99, 185, 0.767) ;
+    color:white;
+    float: right;
+    text-align: center;
+    margin:20px 0;
+
+}
+.dl{
+    line-height: 84px;
+    color:rgb(50, 128, 50);
+    
+}
+.form-in1{
+    height:34px;
+    width:100%;
+    border:1px solid green;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 34px;
+    display: none;
+    background-color:rgb(90, 172, 90);
 }

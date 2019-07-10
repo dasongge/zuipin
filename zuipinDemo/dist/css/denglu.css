@@ -1,8 +1,136 @@
-html, body {
+@charset "UTF-8";
+html, figure, body, h1, h2, h3, h4, h5, h6, p, img, form, fieldset, legend, ul, ol, dl, li, dd, dt {
+  margin: 0;
+  padding: 0; }
+
+ul, ol, dl {
+  list-style: none; }
+
+a {
+  text-decoration: none; }
+
+i, em, b, strong {
+  font-style: normal;
+  font-weight: normal; }
+
+.clear:after {
+  content: "";
+  overflow: hidden;
+  height: 0;
+  visibility: hidden;
+  display: block;
+  clear: both; }
+
+img, fieldset {
+  border: 0;
+  vertical-align: middle; }
+
+body {
+  font-family: Arial, Tahoma, "Microsoft YaHei", "微软雅黑", "Helvetica Neue", Helvetica, STHeiTi, sans-serif;
+  font-size: 14px;
+  color: #333;
   background-color: #f5f5f5; }
 
-.header {
-  width: 100%; }
+.head {
+  width: 100%;
+  background-color: white;
+  overflow: hidden; }
 
-.header_box {
-  width: 1226px; }
+.head_box {
+  width: 1226px;
+  height: 100px;
+  margin: 0 auto;
+  background-color: white;
+  overflow: hidden; }
+
+.zuipin-logo a img {
+  margin-top: 34px; }
+
+.zuipin-page-content {
+  width: 100%;
+  margin: 0 auto;
+  background: #94c6e0 none repeat scroll 0% 0%; }
+
+.login-container {
+  width: 100%;
+  height: 584px;
+  margin: 0 auto;
+  overflow-y: hidden; }
+
+.zuipin-wrapper {
+  width: 1226px;
+  margin: 0 auto;
+  position: relative; }
+
+.login-content > div {
+  float: left; }
+
+.right-content {
+  padding: 0; }
+
+.right-content {
+  width: 380px;
+  height: 524px;
+  box-sizing: border-box;
+  margin-top: 30px;
+  background-color: #fff;
+  position: relative;
+  margin-left: 20px; }
+
+.login-tab {
+  width: 340px;
+  margin: 60px auto 0; }
+
+.login-tab li.on {
+  color: #ff3600;
+  text-align: center;
+  font-size: 18px;
+  cursor: pointer; }
+
+.login-methods {
+  width: 316px;
+  margin: 40px auto 20px; }
+
+.login-methods li input {
+  display: block;
+  width: 100%;
+  height: 44px;
+  line-height: 44px;
+  border: 1px solid #cbcbcb;
+  outline: none;
+  margin-bottom: 20px;
+  text-indent: 15px;
+  font-size: 12px; }
+
+.login-methods .login-btn {
+  font-size: 14px;
+  color: #fff;
+  display: inline-block;
+  background-color: #ddd;
+  width: 100%;
+  border: none;
+  outline: none;
+  height: 44px;
+  line-height: 44px;
+  text-align: center;
+  margin-top: 10px; }
+
+.regist-forget-box {
+  float: right;
+  color: #999; }
+
+.regist-forget-box a {
+  color: #999;
+  text-align: right;
+  padding-right: 30px; }
+
+.form-in1 {
+  height: 34px;
+  width: 100%;
+  border: 1px solid green;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 34px;
+  display: none;
+  background-color: #5aac5a;
+  margin-top: 20px; }
