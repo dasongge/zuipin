@@ -10,7 +10,7 @@ define(["jquery"],function($){
                     for(var i = 0; i < arr.length;i++){
                         var node = $(`
                         <li>
-                        <a href="#"><img src="${arr[i].img}" alt=""></a>
+                        <a href="html/liebiao.html"><img src="${arr[i].img}" alt=""></a>
                         </li>
                        
                         `);

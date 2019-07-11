@@ -81,6 +81,9 @@ body {
   height: 86px;
   padding: 7px 15px; }
 
+#lianjie {
+  display: inline; }
+
 .list_has {
   width: 320px;
   height: 100px;

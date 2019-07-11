@@ -10,12 +10,13 @@ define(["jquery","jquery-cookie"],function($){
             success:function(arr){
                 for(var i = 0; i < arr.length; i++){
                     var node = $(`
+                    
                     <div class="item float-left">
                         <div class="tag-img">
                             <img src="${arr[i].img}" alt="">
                         </div>
                         <dl>
-                            <dt><a href=""><img src="${arr[i].img1}" alt=""></a></dt>
+                            <dt><a href="xiangqing.html"><img src="${arr[i].img1}" alt=""></a></dt>
                             <dd>
                                     <p class="new-goodsSomething" title="${arr[i].p1}">${arr[i].p1}</p>
                                     <p class="goodsPing" title="${arr[i].p2}">${arr[i].p2}</p>
@@ -177,7 +178,7 @@ define(["jquery","jquery-cookie"],function($){
                     <div class="cart_price float-left">
                         
                     </div>
-                    <a class="cart_info_j float-right " href="javascript:;">去购物车</a>
+                    <a class="cart_info_j float-right "shopping.html">去购物车</a>
                     `);
                     node2.appendTo($(".buy_end"));
                     // alert($(".gong span").html())

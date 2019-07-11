@@ -11,10 +11,10 @@ define(["jquery"],function($){
                         <div class="card-content">
                     <!-- left -->
                         <div class="card-left">
-                            <a href="" target="_blank" class="a1">
+                            <a href="html/liebiao.html" target="_blank" class="a1">
                                 <img src="${arr[i].img1}" alt="">
                             </a>
-                            <a href="" target="_blank" class="a2">
+                            <a href="html/liebiao.html" target="_blank" class="a2">
                                 <img src="${arr[i].img2}" alt="">
                             </a>
                         </div>
@@ -22,12 +22,12 @@ define(["jquery"],function($){
                     <div class="card-center">
                         
                     <div class="add-card">
-                        <a href="https://www.zuipin.cn/goods?id=8703300" target="_blank" class="right-top" id="right-top">
+                        <a href="html/liebiao.html" target="_blank" class="right-top" id="right-top">
                             <p class="small-card-text1">${arr[i].pp4}</p>  
                             <p class="small-card-money1">${arr[i].money4}</p> 
                             <img src="images/hehe.jpg" alt="">   
                         </a>
-                        <a href="https://www.zuipin.cn/list?catId=48" target="_blank" class="more-card" id="more-card">
+                        <a href="html/liebiao.html" target="_blank" class="more-card" id="more-card">
                             <h2>${arr[i].h3}</h2>
                             <p>${arr[i].a}</p>
                             
@@ -42,7 +42,7 @@ define(["jquery"],function($){
             </div>`);
             for(var l = 0; l < arr[i].list.length;l++){
                 var node5 = $(`
-                    <a href="https://www.zuipin.cn/goods?id=8699728" target="_blank">
+                    <a href="html/liebiao.html" target="_blank">
                         <div class="special-img">
                             <img src="${arr[i].list[l].img_03}" alt="">
                         </div>

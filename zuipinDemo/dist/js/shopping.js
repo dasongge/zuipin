@@ -3,8 +3,11 @@ define(["jquery","jquery-cookie"],function($){
     function shopping(){
         sc_num();
         sc_num1();
-        
+        sc_num2();
+       
+       
         var cookieStr = $.cookie("goods");
+       
         if(cookieStr){
             var cookieArr = JSON.parse(cookieStr);
             $.ajax({
@@ -18,6 +21,22 @@ define(["jquery","jquery-cookie"],function($){
                                 newArr.push(arr[i]);
                             }
                         }
+                    }
+                    if(!cookieStr){
+                        $(".item-subtotal").html(0);
+                    }else{
+                        var price = 0 ;
+                      
+                        var newArr1 = [];
+                        for(var i = 0; i < newArr.length; i++){
+                          
+                            price = cookieArr[i].num * newArr[i].p3;
+                            newArr1.push(price);
+                           
+                        }
+                        // $(".item-subtotal").html("${price}");
+                       
+                      
                     }
                     for(var i = 0; i < newArr.length;i++){
                        var node = $(`
@@ -46,7 +65,7 @@ define(["jquery","jquery-cookie"],function($){
                             <div class="price-sp float-left">
                                 <p>
                                 ￥<span class="price">
-                                        ${arr[i].p3}.00
+                                        ${newArr[i].p3}.00
                                     </span>
                                 </p>
                             </div>
@@ -58,7 +77,7 @@ define(["jquery","jquery-cookie"],function($){
                             </div>
     
                             <div class="count-sp float-left">
-                                <p class="deep-red">￥<span class="all-price item-subtotal">${arr[i].p3 * newArr[i].num}.00</span></p>
+                                <p class="deep-red">￥<span class="all-price item-subtotal">${newArr1[i]}.00</span></p>
                             </div>
     
                             <div class="do-sp float-left">
@@ -68,9 +87,10 @@ define(["jquery","jquery-cookie"],function($){
                         </dd>
                         `);
                         node.appendTo("#sh_cart");
-                        
+                       
                         
                     }
+                    
                 },
                 error:function(msg){
                     alert(msg);
@@ -78,11 +98,8 @@ define(["jquery","jquery-cookie"],function($){
 
             })
         }
-        
-        // //添加点击事件  +  -
         $("#sh_cart").on("click","button",function(){
             // alert(this.innerHTML);
-           
             //找到商品id
             var id =$(this).closest("div").attr("id");
             var cookieArr = JSON.parse($.cookie("goods"));
@@ -105,14 +122,61 @@ define(["jquery","jquery-cookie"],function($){
                     $(this).siblings("input").val(cookieArr[i].num);
                     break;
                 }
+               
             }
             //将数据存回cookie
             $.cookie("goods",JSON.stringify(cookieArr),{
                 expires:7
             })
+            var op = $(".price").html();
+            var oy = $(".product-num").val();
+            $(this).parent().next().children().children().html(op * oy);
+           
+        
             sc_num1();
             sc_num();
+            sc_num2();
+           
+            
         })
+        // //添加点击事件  +  -
+        // $("#sh_cart").on("click","button",function(){
+        //     // alert(this.innerHTML);
+           
+        //     //找到商品id
+        //     var id =$(this).closest("div").attr("id");
+        //     var cookieArr = JSON.parse($.cookie("goods"));
+        //     for(var i= 0 ; i < cookieArr.length; i++){
+        //         if(cookieArr[i].id == id){
+        //             //找到当前要修改的商品
+        //             //判断是要+ 还是 —
+        //             if(this.innerHTML == "+"){
+        //                 cookieArr[i].num++;
+        //             }else{
+        //                 if(cookieArr[i].num == "1"){
+        //                     alert("数量已为1，无法删减");
+        //                 }else{
+        //                     cookieArr[i].num--;
+        //                 }
+                        
+                       
+        //             }
+        //             //在页面显示商品数量
+        //             $(this).siblings("input").val(cookieArr[i].num);
+        //             break;
+        //         }
+               
+        //     }
+        //     //将数据存回cookie
+        //     $.cookie("goods",JSON.stringify(cookieArr),{
+        //         expires:7
+        //     })
+        //     sc_num1();
+        //     sc_num();
+        //     sc_num2();
+           
+            
+        // })
 
         //添加点击事件 删除
         $("#sh_cart").on("click",".del",function(){
@@ -136,28 +200,95 @@ define(["jquery","jquery-cookie"],function($){
             }
             sc_num1();
             sc_num();
+            sc_num2();
+           
         
         })
 
-        //让小计的所有数值进行相加
-        // function sc_num2(){
-        //     var cookieStr = $.cookie("goods");
-        //     var num = 0 ;
-        //     if(cookieStr){
-                
-        //         var cookieArr = JSON.parse(cookieStr);
-        //         for(var i = 0 ; i < cookieArr.length;i++){
-        //             // sum1 += cookieArr[i].num;
-        //             // var n = $(".price").html() * cookieArr[i].num;
-                    
-        //         }
-        //         // $(".big-money").html(n++);
-        //     }
+        //计算总价
+        function sc_num2(){
+           
+            var cookieStr = $.cookie("goods");
+            var cookieArr = JSON.parse(cookieStr);
             
+            $.ajax({
+                url:"../data/liebiao.json",
+                success:function(arr){
+                    var newArr = [];
+                    for(var i = 0 ; i < arr.length; i++){
+                        for(var j = 0; j < cookieArr.length;j++){
+                            if(arr[i].id == cookieArr[j].id){
+                                arr[i].num = cookieArr[j].num;//将商品的数量给
+                                newArr.push(arr[i]);
+                            }
+                        }
+                    }
+                    if(!cookieStr){
+                        $(".big-money").html(0);
+                    }else{
+                        var price = 0 ;
+                        var sum = 0
+                        
+                        for(var i = 0; i < newArr.length; i++){
+                            sum += cookieArr[i].num;
+                            // pr = cookieArr[i].num * newArr[i].p3;
+                            price += cookieArr[i].num * newArr[i].p3
+                        }
+                        // $(".item-subtotal").html("${price}");
+                        $(".big-money").html(`${price}`);
+                        // $(".item-subtotal").eq(i).html(`${pr}`);
+                    }
+                    
+                },
+                error:function(msg){
+                    alert(msg);
+                }
+            })
+            
+        }
+        // 计算小计
+        function sc_num3(){
            
-           
-           
-        // }
+            var cookieStr = $.cookie("goods");
+            var cookieArr = JSON.parse(cookieStr);
+            
+            $.ajax({
+                url:"../data/liebiao.json",
+                success:function(arr){
+                    var newArr = [];
+                    for(var i = 0 ; i < arr.length; i++){
+                        for(var j = 0; j < cookieArr.length;j++){
+                            if(arr[i].id == cookieArr[j].id){
+                                arr[i].num = cookieArr[j].num;//将商品的数量给
+                                newArr.push(arr[i]);
+                            }
+                        }
+                    }
+                    if(!cookieStr){
+                        $(".item-subtotal").html(0);
+                    }else{
+                        var price = 0 ;
+                      
+                        var newArr1 = [];
+                        for(var i = 0; i < newArr.length; i++){
+                          
+                            price = cookieArr[i].num * newArr[i].p3;
+                            newArr1.push(price);
+                           
+                        }
+                        // $(".item-subtotal").html("${price}"); 
+                    }
+                   
+                    
+                    
+                },
+                error:function(msg){
+                    alert(msg);
+                }
+            })
+            
+        }
+
         //计算商品数量
         function sc_num1(){
             var cookieStr = $.cookie("goods");

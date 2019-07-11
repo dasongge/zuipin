@@ -7,7 +7,7 @@ define(["jquery"],function($){
             success:function(arr){
                 for(var i = 0; i < arr.length; i++){
                     var node = $(`
-                    <a href="#" target="_blank">
+                    <a href="html/liebiao.html" target="_blank">
                     <img src="${arr[i].img}" alt="自饮选茶">
                     </a>
                     `);

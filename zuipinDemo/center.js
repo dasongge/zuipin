@@ -13,10 +13,10 @@ define(["jquery"],function($){
                             <div class= "card-title">${arr[i].name}</div>
                             <div class="card-content">
                                 <div class="content-left">
-                                    <a href="#" target="_blank" class="tp">
+                                    <a href="html/liebiao.html" target="_blank" class="tp">
                                         <img src=" ${arr[i].img}" alt="">   
                                     </a>
-                                    <a href="#" target="_blank" class="zi">
+                                    <a href="html/liebiao.html" target="_blank" class="zi">
                                         <h2>${arr[i].hh2}</h2>
                                         <p>${arr[i].p1}</p>
                                         <p>${arr[i].p2}</p>
@@ -29,9 +29,9 @@ define(["jquery"],function($){
                                 </div>
                                 <div class="content-right">
                                     <div class="news">
-                                        <a href="" target="_blank" class="news_head" id="news_head">${arr[i].h1}</a>                                       
+                                        <a href="html/liebiao.html" target="_blank" class="news_head" id="news_head">${arr[i].h1}</a>                                       
                                     </div>
-                                    <a href="https://www.zuipin.cn/tips/drink" target="_blank" class="zi more-card">
+                                    <a href="html/liebiao.html" target="_blank" class="zi more-card">
                                         <h2>${arr[i].h2}</h2>
                                         <p>${arr[i].ppp1}</p>
                                         <p>${arr[i].ppp2}</p>
@@ -47,7 +47,7 @@ define(["jquery"],function($){
                         
                         for(var j = 0 ; j < arr[i].tu.length;j++){
                            var node1 = $(`
-                            <a href="https://www.zuipin.cn/goods?id=8699842" target="_blank">
+                            <a href="html/liebiao.html" target="_blank">
                                 <div class="special-img">
                                     <img src="${arr[i].tu[j].img_01}" alt="">
                                 </div>
@@ -66,7 +66,7 @@ define(["jquery"],function($){
                         }
                         for(var k = 0;  k < arr[i].right.length; k++){
                             var node2 = $(`
-                            <a href="https://www.zuipin.cn/tips/drink/232#tipsdetail" target="_blank" class="news-item clear">
+                            <a href="html/liebiao.html" target="_blank" class="news-item clear">
                                 <p class="news-title">${arr[i].right[k].p3}</p>
                                 <div class="news-artical">
                                     <img src="${arr[i].right[k].img_02}" alt="">  
